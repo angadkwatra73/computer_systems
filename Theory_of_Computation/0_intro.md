@@ -44,6 +44,21 @@ Three stages, each a more powerful model than the last.
 
 Each stage gets its own notes file, linked from here as it is written.
 
+
+## How we studied
+### Part 1 
+1. rl_fa.md, union,nfa,dfa.md
+- understood FA, understood Reg Ex - both represent reg lang
+- introduced non-determinism, then coversion NFA to DFA
+- closure properties - union could be proved w DFA, used NFA to prove . (concat), and * (star)
+
+2. regex_fa.md
+- regex -> fa
+- introduce gnfa, and gnfa -> regex
+- non regular lanag
+
+
+
 ## Sources
 
 - Ben Brubaker, ["Does Computer Science Need Computers?"](https://quantamagazine.org/does-computer-science-need-computers-20260828), Quanta Magazine (on the quote's attribution).
