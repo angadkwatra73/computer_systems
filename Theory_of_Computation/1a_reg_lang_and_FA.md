@@ -27,13 +27,14 @@ A regular expression R is a syntactic object, a string of symbols and operators,
 - **Inductive construction:** if R₁ and R₂ are regular expressions, so are (R₁ ∪ R₂), (R₁R₂) and (R₁\*).
 - **Each regex operator mirrors a language operation:**
 
-```latex
+$$
 L(R_1 \cup R_2) = L(R_1) \cup L(R_2)
 \qquad
 L(R_1 R_2) = L(R_1) \circ L(R_2)
 \qquad
 L(R^*) = \big(L(R)\big)^*
-```
+$$
+
 Note: We've mentioned regular ops, create regular expression, and combing reg ex with reg ex using ops also creates reg ex. 
 While it's true, this is not to be confused with regular languages. we have not yet shown reg ex means a RL. 
 
