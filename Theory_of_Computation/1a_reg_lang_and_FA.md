@@ -29,14 +29,13 @@ A regular expression R is a syntactic object, a string of symbols and operators,
 
 $$
 \begin{aligned}
-L(R_1 \cup R_2) = L(R_1) \cup L(R_2)
-\qquad \\
-L(R_1 R_2) = L(R_1) \circ L(R_2)
-\qquad \\
-L(R^*) = \big(L(R)\big)^* \\
+L(R_1 \cup R_2) &= L(R_1) \cup L(R_2) \\
+L(R_1 R_2) &= L(R_1) \circ L(R_2) \\
+L(R^{\ast}) &= \big(L(R)\big)^{\ast}
 \end{aligned}
 $$
 
+**[Important]**
 Note: We've mentioned regular ops, create regular expression, and combing reg ex with reg ex using ops also creates reg ex. 
 While it's true, this is not to be confused with regular languages. we have not yet shown reg ex means a RL. 
 
