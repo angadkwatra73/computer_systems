@@ -28,11 +28,13 @@ A regular expression R is a syntactic object, a string of symbols and operators,
 - **Each regex operator mirrors a language operation:**
 
 $$
+\begin{aligned}
 L(R_1 \cup R_2) = L(R_1) \cup L(R_2)
-\qquad
+\qquad \\
 L(R_1 R_2) = L(R_1) \circ L(R_2)
-\qquad
-L(R^*) = \big(L(R)\big)^*
+\qquad \\
+L(R^*) = \big(L(R)\big)^* \\
+\end{aligned}
 $$
 
 Note: We've mentioned regular ops, create regular expression, and combing reg ex with reg ex using ops also creates reg ex. 
@@ -48,11 +50,14 @@ Note: Below, we are proving the operations for languages and not regular express
 
 **Proof idea (product construction):** run M₁ and M₂ in parallel on the same input, and accept if either one accepts. Let M₁ = (Q₁, Σ, δ₁, q₁, F₁) recognize A₁ and M₂ = (Q₂, Σ, δ₂, q₂, F₂) recognize A₂. Build M = (Q, Σ, δ, q₀, F) with:
 
-```latex
-Q = Q_1 \times Q_2 \qquad q_0 = (q_1, q_2)
-\delta((q, r), a) = (\delta_1(q, a),\ \delta_2(r, a))
-F = (F_1 \times Q_2) \cup (Q_1 \times F_2)
-```
+$$
+\begin{aligned}
+Q = Q_1 \times Q_2 \qquad q_0 = (q_1, q_2) \\
+\delta((q, r), a) = (\delta_1(q, a),\ \delta_2(r, a)) \\
+F = (F_1 \times Q_2) \cup (Q_1 \times F_2) \\
+\end{aligned}
+$$
+
 
 - A state of M is a pair that tracks where M₁ and M₂ each currently are.
 - **F is "either side accepts".** The tempting F = F₁ × F₂ means "both accept", which gives the intersection, not the union.
