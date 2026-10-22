@@ -73,9 +73,7 @@ Non-determinism is a design convenience: it looks more powerful than a DFA, but 
 - **Acceptance:** an NFA accepts w if *any* path through it ends in an accepting state. It rejects only if *every* path fails.
 - **Formal change:** the transition function now returns a set of states.
 
-```latex
 $$ \delta : Q \times (\Sigma \cup \{\varepsilon\}) \to \mathcal{P}(Q) $$
-```
 
 **Three ways to picture it:**
 
