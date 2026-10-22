@@ -34,10 +34,16 @@ L(R_1 R_2) = L(R_1) \circ L(R_2)
 \qquad
 L(R^*) = \big(L(R)\big)^*
 ```
+Note: We've mentioned regular ops, create regular expression, and combing reg ex with reg ex using ops also creates reg ex. 
+While it's true, this is not to be confused with regular languages. we have not yet shown reg ex means a RL. 
 
-## 4. Closure Under Union (via DFAs)
+Later, to show that, we will prove that reg exps can be realised as NFAs hence proving they are regular
 
-**Theorem:** if A₁ and A₂ are regular, so is A₁ ∪ A₂.
+Note: Below, we are proving the operations for languages and not regular expressions
+
+## 4. Closure Under Union (via DFAs) [for languages]
+
+**Theorem:** if langauges A₁ and A₂ are regular, so is A₁ ∪ A₂. The class of regular languages is closed under union.
 
 **Proof idea (product construction):** run M₁ and M₂ in parallel on the same input, and accept if either one accepts. Let M₁ = (Q₁, Σ, δ₁, q₁, F₁) recognize A₁ and M₂ = (Q₂, Σ, δ₂, q₂, F₂) recognize A₂. Build M = (Q, Σ, δ, q₀, F) with:
 
@@ -68,7 +74,7 @@ Non-determinism is a design convenience: it looks more powerful than a DFA, but 
 - **Formal change:** the transition function now returns a set of states.
 
 ```latex
-\delta : Q \times (\Sigma \cup \{\varepsilon\}) \to \mathcal{P}(Q)
+$$ \delta : Q \times (\Sigma \cup \{\varepsilon\}) \to \mathcal{P}(Q) $$
 ```
 
 **Three ways to picture it:**
