@@ -1,0 +1,14 @@
+So next up
+
+- define closure for lnaunage 
+	- concat
+	- star
+
+- regex -> fA 
+
+- fa -> regex
+	- introduces gnfa
+	- k state -> k-1 state
+
+- then irregular languages
+
